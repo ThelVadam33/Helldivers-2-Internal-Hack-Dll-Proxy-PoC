@@ -10,7 +10,7 @@
 #include <conio.h> // For _getch() on Windows
 #include "xorstr.hpp"
 
-
+//?31mVwn#Q8+t-'5g`+3RF`Av/~W)w&]F
 HANDLE hMainThread;
 HMODULE g_hModule;
 
@@ -64,7 +64,7 @@ void displayCheckboxes(const std::vector<Checkbox>& checkboxes, size_t selectedC
     }
     std::cout << "\n";
 }
-
+//^I%VokFrLfdqE=;jD!=".GU4>)v<tn{h
 DWORD WINAPI Payload(LPVOID lpParam)
 {
     // Initialize the proxy for the DLL
@@ -155,7 +155,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
             // Ignore other key presses
             break;
         }
-
+//%}~Vw[0?2&c#U(/!SJ~^"^^_5U!V=mKb
     } while (userInput != 13); // Loop until the Esc key is pressed
 
     for (size_t i = 0; i < checkboxes.size(); ++i) {
@@ -198,7 +198,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     memory = Memory::AllocateMemory(InfHealth1, sizeof(SetHealthBytes));
                     Memory::CreateTrampoline(InfHealth1, memory);
                     Memory::WriteAssemblyInstructions((uintptr_t)memory, InfHealth1 + 18, SetHealthBytes, Memory::ArrayLength(SetHealthBytes));
-
+//,=1|o@OXnZdI'56lQe-a(@:bv?5i~C`}
                     gData.InfHealth = !gData.InfHealth;
                     //create trampolin
                     printf(_XOR_("[Active] Infinite Health\n"));
@@ -219,7 +219,8 @@ DWORD WINAPI Payload(LPVOID lpParam)
             if (checkboxes[i].title == _XOR_("Inf Grenades(Legit)"))
             {
                 if (!gData.InfGrenadesLegit && !gData.InfGrenades)
-                {
+                {/*Xq1Lcy:BbC}C(lV?1#)G)4OH*-DKR`LK
+                    kCfAGM:}GpR**ea5pd_lMi\rx@=_TH`o*/
                     uintptr_t GrenadesAddress = Memory::FindPattern(_XOR_("game.dll"), _XOR_("4D 03 C6 41 FF 08"));
                     BYTE GrenadeBytes[] =
                     {
@@ -274,7 +275,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
 
             if (checkboxes[i].title == _XOR_("Inf Syringes"))
             {
-                if (!gData.InfSyringes)
+                if (!gData.InfSyringes)//;$jA?m$@po)2v>[34ySLfeiQ.>>#gQ/L
                 {
                     uintptr_t Syringes = Memory::FindPattern(_XOR_("game.dll"), _XOR_("41 FF CF 3B C2 74 61"));
                     Memory::Nop((LPVOID)(Syringes), 3);
@@ -317,7 +318,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     printf(_XOR_("[Active] Infinite Stamina\n"));
                 }
             }
-
+//M;iL.7/ YYEb!x.H5.wo6}'vF=  5!]p
             if (checkboxes[i].title == _XOR_("Inf Stratagems"))
             {
                 if (!gData.InfStratagems)
@@ -340,7 +341,11 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     printf(_XOR_("[Active] Infinite Mission Time\n"));
                 }
             }
-
+/*IF8sZomi95B@yGIJV(f>G.XB=;'9Ii%O
+"-W[LPY9,cPLIf/c)^JX:F)h>a($tbH`
+I7!C^Au-@4Qweh;"hEUy'GA8*^ZNJXTG
+Gk8~M/5}2V}{91K<Fr@t.a;c\ P={Hd6
+Gh3M]S^kCW:n@`Nt%?sI]1L=+"16_'@w*/
             if (checkboxes[i].title == _XOR_("No Reload"))
             {
                 if (!gData.NoReload)
@@ -386,7 +391,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     gData.MaxResources = !gData.MaxResources;
                     printf(_XOR_("[Active] x500 Samples\n"));
                 }
-            }
+            }//('J.d2T''}.yT}^/:3Sz@7oQE-\y"+r)
 
             if (checkboxes[i].title == _XOR_("Add 5 Samples"))
             {
@@ -429,7 +434,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            
+            //ll"!{VM9%79=z8xC`sK=/lSv-v)oxw{f
             if (checkboxes[i].title == _XOR_("MoveSpeed X6"))
             {
                 if (!gData.Speedhack)
@@ -490,7 +495,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     printf(_XOR_("[Active] Infinite Special Weapon\n"));
                 }
             }
-
+//F[MqY3^lr<KDLnIKTL7<awD&G@U<Co2D
             if (checkboxes[i].title == _XOR_("No Stationary Turret Overheat"))
             {
                 if (!gData.NoStasTurretOverHeat)
@@ -559,7 +564,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     {
                         0x90, 0xE9
                     };
-
+//Sh__wzs7<!Z$^NN\lv+)aYx,RHQ~gS[E
                     BYTE ShowAllMapIconsByte3[] =
                     {
                         0xEB, 0x04
@@ -597,7 +602,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     printf(_XOR_("[Active] Unlock All Stratagems\n"));
                 }
             }
-
+//<_(*/r'`T=2V'%h'UN!>&z~el5-K45{;
             if (checkboxes[i].title == _XOR_("All Equipment in Armory"))
             {
                 if (!gData.AllEquipment)
@@ -663,7 +668,8 @@ DWORD WINAPI Payload(LPVOID lpParam)
     FreeLibraryAndExitThread(g_hModule, 0);
     return 0;
 }
-
+/*:s-TpyRZiK%L&{{EK7'_xzyQd@\9z'E^
+lXNzk=i/AxfP%#"z3e+mfW1F]1V4-?F@*/
 
 BOOL APIENTRY DllMain(HMODULE hModule,
     DWORD  ul_reason_for_call,
